@@ -1,0 +1,345 @@
+.header {
+  background: linear-gradient(
+    to bottom,
+    $gradientVeryLightRed,
+    $gradientLightRed
+  );
+  border-bottom-left-radius: 8.5rem;
+  overflow: hidden;
+
+  p,
+  h2,
+  .landing--button {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .test {
+    height: 35.5rem;
+    background-image: url("../images/bg-pattern-intro.svg");
+    background-position: 33% 33%;
+    background-repeat: no-repeat;
+    background-size: 75.31rem;
+    @include breakpoint-up(large) {
+      background-position: 25% 52%;
+      background-size: 202rem;
+    }
+  }
+  li {
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      margin-right: 0.5rem;
+      transition: all 300ms ease-in-out;
+
+      @include breakpoint-up(large) {
+        &:hover {
+          font-weight: 600;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+    .menu-arrow {
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  nav {
+    padding: 1rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 3rem;
+    }
+  }
+  &__logo {
+    margin: 0.5rem;
+    @include breakpoint-up(large) {
+      margin-left: 5rem;
+    }
+  }
+
+  &__hamburger {
+    // Mobile menu
+
+    > span {
+      display: block;
+      width: 29px;
+      height: 2px;
+      background-color: $white;
+      transform-origin: 3px 1px;
+      transition: all 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        // can't transition display block
+        // to display none that's why
+        // opacity 0
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    width: 85vw;
+    //flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    left: 10%;
+
+    @include breakpoint-up(large) {
+      display: block;
+      background-color: transparent;
+      box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+      position: absolute;
+      width: auto;
+      // display: flex;
+      // flex-direction: row;
+      left: 15%;
+      margin-top: -4.5rem;
+    }
+
+    &__flex {
+      @include breakpoint-up(large) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &.open {
+      display: block;
+    }
+    ul {
+      // flex-direction: column;
+      @include breakpoint-up(large) {
+        // flex-direction: row;
+      }
+    }
+
+    ul a {
+      color: black;
+      text-align: center;
+      @include breakpoint-up(large) {
+        color: $white;
+        margin-left: 40px;
+      }
+    }
+
+    .navbar-item {
+      font-weight: 600;
+      padding: 1rem 0;
+      @include breakpoint-up(large) {
+        font-weight: 300;
+      }
+    }
+
+    .mobile-arrow {
+      @include breakpoint-up(large) {
+        display: none;
+      }
+    }
+    .login__container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin-right: 2rem;
+      @include breakpoint-up(large) {
+        flex-direction: row;
+        margin-top: 0rem;
+        position: absolute;
+        left: 200%;
+      }
+    }
+    .divider {
+      visibility: visible;
+      width: 30vw;
+      margin: 2rem auto;
+      @include breakpoint-up(large) {
+        display: none;
+      }
+    }
+    .sub-menu {
+      display: none;
+    }
+    .sub-menu.open {
+      display: block;
+      background-color: hsl(240, 3%, 93%);
+      width: 70%;
+      color: $veryDarkBlue;
+      border-radius: 5px;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      bottom: 10%;
+      right: 5%;
+      padding: 1rem;
+
+      @include breakpoint-up(large) {
+        position: relative;
+        padding: 1rem;
+        width: 7rem;
+        height: auto;
+        top: 0%;
+        right: 0%;
+        background-color: $white;
+      }
+    }
+
+    .sub-menu.open li {
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+      @include breakpoint-up(large) {
+        text-align: left;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .log-in {
+      color: $veryDarkBlue;
+      margin-bottom: 2rem;
+
+      font-weight: 600;
+
+      @include breakpoint-up(large) {
+        color: $white;
+        padding-right: 30px;
+        font-weight: 300;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .signup-btn {
+      border-radius: 30px;
+      padding: 0.9rem 2rem;
+      border: none;
+      font-weight: 600;
+      transition: all 300ms ease-in-out;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: $white;
+      background: linear-gradient(
+        to right,
+        $gradientVeryLightRed,
+        $gradientLightRed
+      );
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        @include breakpoint-up(large) {
+          opacity: 1;
+          color: $white;
+          background: linear-gradient(to right, $veryLightRed, $veryLightRed);
+          cursor: pointer;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 0.8rem;
+        color: $lightRed;
+        background: linear-gradient(to right, $white, $white);
+        border-radius: 20px;
+        padding: 0.55rem 1.4rem;
+        margin-right: 90px;
+      }
+    }
+  }
+
+  &__hero {
+    margin-top: 5rem;
+
+    h2,
+    p {
+      color: $white;
+    }
+    h2 {
+      font-size: 2rem;
+      line-height: 2.1rem;
+
+      @include breakpoint-up(large) {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+    p {
+      margin-bottom: 5rem;
+      @include breakpoint-up(large) {
+        font-size: 1.3rem;
+        margin-top: 4.5rem;
+      }
+    }
+  }
+
+  .landing--button {
+    .button {
+      border-radius: 30px;
+      padding: 0.75rem;
+      border: none;
+      font-weight: 600;
+      transition: all 300ms ease-in-out;
+
+      @include breakpoint-up(large) {
+        padding: 0.75rem 1rem;
+      }
+    }
+    .start {
+      color: $lightRed;
+      &:hover {
+        color: $white;
+        background-color: $veryLightRed;
+      }
+    }
+    .learn {
+      background: transparent;
+      border: solid 1px $white;
+      color: $white;
+      &:hover {
+        color: $veryLightRed;
+        background-color: $white;
+      }
+      @include breakpoint-up(large) {
+        padding: 0.7rem 1rem;
+      }
+    }
+  }
+}

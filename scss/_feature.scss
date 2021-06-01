@@ -1,0 +1,63 @@
+.feature {
+  text-align: center;
+  padding-top: 1rem;
+  overflow: hidden;
+
+  &__heading {
+    @include breakpoint-up(large) {
+      font-size: 1.8rem;
+      padding-top: 3rem;
+    }
+  }
+
+  &__images {
+    .desktop--img {
+      display: none;
+      @include breakpoint-up(large) {
+        display: block;
+        width: 50vw;
+        position: relative;
+      }
+    }
+    @include breakpoint-up(large) {
+      .first {
+        left: 17rem;
+      }
+    }
+    @include breakpoint-up(large) {
+      .second {
+        right: 17rem;
+      }
+    }
+
+    .mobile--img {
+      @include breakpoint-up(large) {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint-up(large) {
+    .flexbox--section1 {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    .flexbox--section2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .features--section1 {
+      text-align: left;
+    }
+    .features--section2 {
+      text-align: right;
+    }
+  }
+
+  &__1,
+  &__2 {
+    padding-top: 0.75rem;
+  }
+}

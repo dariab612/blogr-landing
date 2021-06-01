@@ -1,0 +1,70 @@
+.blogr__phonebox {
+  text-align: center;
+
+  @include breakpoint-up(large) {
+    display: flex;
+  }
+  img {
+    margin-bottom: -230px;
+    width: 20.5rem;
+    height: 21.68rem;
+    @include breakpoint-up(large) {
+      width: 29.5rem;
+      height: 31.18rem;
+      top: 15.62rem;
+      left: 6.56rem;
+      margin-bottom: -490px;
+      margin-left: 150px;
+    }
+  }
+}
+.state__container--textbox {
+}
+.state__container--title,
+.state__container--description {
+  text-align: center;
+  color: $white;
+  line-height: 1.5rem;
+  @include breakpoint-up(large) {
+    text-align: left;
+    margin-left: 800px;
+  }
+}
+.state__container--description {
+  @include breakpoint-up(large) {
+    width: 35vw;
+  }
+}
+.state__container--title {
+  padding-top: 9rem;
+  @include breakpoint-up(large) {
+    padding-top: 4.5rem;
+  }
+}
+.state__container {
+  overflow: hidden;
+  height: 28.125rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to right,
+    $gradientVerDarkGrayBlue,
+    $gradientVeryDarkDesaturatedBlue
+  );
+  border-top-right-radius: 7.5rem;
+  border-bottom-left-radius: 7.5rem;
+  @include breakpoint-up(large) {
+    height: 25rem;
+  }
+}
+.test2 {
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-position: 50% 160%;
+  background-repeat: no-repeat;
+  background-size: 38.125rem;
+  height: 28.125rem;
+  padding-top: 3rem;
+  @include breakpoint-up(large) {
+    background-position: -47% 76%;
+    background-size: 61.875rem;
+  }
+}

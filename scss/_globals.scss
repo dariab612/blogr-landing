@@ -1,0 +1,80 @@
+html {
+  // Let user control zoom level in their browser
+  font-size: 1.125rem;
+  // Свойства width и height включают в себя значения полей и границ,
+  // но не отступов (margin)
+  box-sizing: border-box;
+}
+
+// The ::before and ::after pseudo-elements in CSS allows you to insert
+// content onto a page without it needing to be in the HTML. While the
+// end result is not actually in the DOM, it appears on the page as if it is.
+*,
+*::before,
+*::after {
+  // Наследует значение родителя.
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3rem;
+  font-family: "Overpass", sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  color: $veryDarkBlue;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+  &--pall {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+
+  &--py {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-c-w {
+    color: $white;
+  }
+}
